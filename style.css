@@ -1,0 +1,180 @@
+* {
+    background-color: rgb(173, 184, 182);
+    padding: 0%;
+    margin: 0%;
+    user-select: none;
+    user-zoom: fixed;
+    z-index: 0;
+
+}
+:root {
+    --FonteMenu: 0;
+}
+
+p {
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Arial;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/*------------------  ------------------*/
+
+/*------------------ BARRA MENU ------------------*/
+#BarraMenu {
+    width: 100%;
+    height: 75px;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 10px 70px 10px rgba(0, 0, 0, 0.500);
+    z-index: 2;
+}
+
+#BarraMenu>button {
+    width: 45px;
+    height: 40px;
+    position: absolute;
+    left: 20px;
+    top: 17px;
+    background: none;
+    background-image: url(Img/ImgButton.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: rgba(240, 248, 255, 0);
+    opacity: 50%;
+    border-radius: 100%;
+    transition: opacity 0.3s ease;
+    z-index: 2
+}
+
+
+#BarraMenu>button:active {
+    opacity: 100%;
+    transition: opacity 0.2s ease;
+    z-index: 2
+}
+
+/*------------------  ------------------*/
+
+/*------------------ OPÇÃO 1 MENU ------------------*/
+
+#Opção1Menu {
+    margin: 10px;
+    padding: 0px;
+    left: -50px;
+    position: absolute;
+    width: 0px;
+    height: auto;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 10px 70px 10px rgba(0, 0, 0, 0.500);
+    z-index: 1;
+    top: 70px;
+    font-size: 0px;
+    transition: all 0.2s ease;
+
+}
+
+#Opção1Menu>a>P {
+    opacity: var(--FonteMenu);
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;    
+    font-size: 0.5em;
+    width: auto;
+    height: auto;
+    transition: opacity 0.1s ease, transform 0.4s ease;
+}
+
+#Opção1Menu>a>P:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.500);
+    color: white;
+}
+
+#Opção1Menu>a>P:active {
+    color: black;
+    background-color: rgba(0, 0, 0, 0);
+}
+/*------------------  ------------------*/
+
+/*------------------ BODY ------------------*/
+
+body>div {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    height: 2000px;
+    z-index: 1;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0 10px 20px 20px rgba(0, 0, 0, 0.500);
+}
+
+/*------------------  ------------------*/
+
+/*------------------ FOOTER ------------------*/
+
+footer {
+    position: relative;
+    top: 2000px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    text-align: center;
+    z-index: 0;
+}
+
+
+#Whatsapp {
+    margin: 0 auto;
+    display: inline-block;
+    margin: 10px;
+    background-image: url(Img/Whatsapp.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    box-shadow: 0 0 0px 0px rgb(3, 193, 0);
+    transition: transform 0.4s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    filter: brightness(0.8);
+    z-index: 1;
+
+}
+
+#Whatsapp:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 2px rgb(147, 255, 145);
+    filter: brightness(1);
+}
+
+#Email {
+    margin: 0 auto;
+    display: inline-block;
+    margin: 10px;
+    background-image: url(Img/Email.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100%;
+    width: 70px;
+    height: 70px;
+    filter: contrast(2) brightness(0.8);
+    box-shadow: 0 0 0px 0px rgb(66, 98, 154);
+    transition: transform 0.4s ease, box-shadow 0.2s ease, filter 0.2s ease;
+    z-index: 1;
+}
+#Email:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 2px rgb(145, 147, 255);
+    filter: contrast(2) brightness(1);
+}
+
+/*------------------  ------------------*/
