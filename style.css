@@ -35,11 +35,11 @@ a {
     z-index: 2;
 }
 
-#BarraMenu>button {
+#bMenu {
     width: 45px;
     height: 40px;
     position: absolute;
-    left: 20px;
+    left: 7mm;
     top: 17px;
     background: none;
     background-image: url(Img/ImgButton.png);
@@ -54,11 +54,36 @@ a {
 }
 
 
-#BarraMenu>button:active {
+#bMenu:active {
     opacity: 100%;
     transition: opacity 0.2s ease;
-    z-index: 2
 }
+
+
+#bProfile   {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 5mm;
+    top: 13px;
+    background: none;
+    background-image: url(Img/IconPessoa.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-color: rgba(0, 0, 0, 0);
+    opacity: 50%;
+    border-radius: 100%;
+    transition: opacity 0.3s ease;
+    z-index: 2;
+}
+
+
+#bProfile:active    {
+    opacity: 100%;
+    transition: opacity 0.2s ease;
+}
+
 
 /*------------------  ------------------*/
 
