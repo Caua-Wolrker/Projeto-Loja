@@ -9,6 +9,7 @@
 }
 :root {
     --FonteMenu: 0;
+    --FonteProfile: 0;
 }
 
 p {
@@ -19,6 +20,17 @@ p {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+h5 {
+    background-color: rgba(0, 0, 0, 0);
+    font-family: Arial;
+}
+
+h6 {
+    background: none;
+    font-family: Arial;
+    color: blue;
 }
 
 /*------------------  ------------------*/
@@ -106,9 +118,13 @@ a {
 
 }
 
+#Opção1Menu>h5  {
+    margin: 10px;
+    text-align: center;
+}
+
 #Opção1Menu>a>P {
     opacity: var(--FonteMenu);
-    text-align: center;
     border-radius: 10px;
     padding: 10px;    
     font-size: 0.5em;
@@ -127,6 +143,58 @@ a {
     color: black;
     background-color: rgba(0, 0, 0, 0);
 }
+/*------------------  ------------------*/
+
+/*------------------ Opção1Profile ------------------*/
+
+#Opção1Profile  {
+    margin: 10px;
+    padding: 0;
+    right: -50px;
+    position: absolute;
+    width: 0px;
+    height: auto;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0 10px 70px 10px rgba(0, 0, 0, 0.500);
+    z-index: 1;
+    top: 70px;
+    font-size: 0px;
+    transition: all 0.2s ease;
+}
+
+#Opção1Profile>a>h6    {
+    margin: 10px;
+    text-align: center;
+    transition: color 0.1s ease;
+}
+
+#Opção1Profile>a>h6:hover    {
+    color: aqua;
+}
+
+#Opção1Profile>a>p  {
+    opacity: var(--FonteProfile);
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 0.5em;
+    width: auto;
+    height: auto;
+    transition: opacity 0.1s ease, transform 0.4s ease;
+}
+
+#Opção1Profile>a>p:hover    {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.500);
+    color: white;
+}
+
+#Opção1Profile>a>P:active   {
+    color: black;
+    background-color: rgba(0, 0, 0, 0);
+}
+
 /*------------------  ------------------*/
 
 /*------------------ BODY ------------------*/

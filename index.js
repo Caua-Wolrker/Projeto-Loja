@@ -1,18 +1,34 @@
 var menu = false;
-let Root = document.querySelector(":root");
-console.log(Root.style.getPropertyValue("--FonteMenu"));
+var profile = false;
+let RootFM = document.querySelector(":root");
+console.log(RootFM.style.getPropertyValue("--FonteMenu"));
+
+let RootFP = document.querySelector(":root");
+console.log(RootFP.style.getPropertyValue("--FonteProfile"));
+
 
 document.addEventListener("click", function(event) {
-    var button = document.querySelector("#BarraMenu>button");
-    var isClickInside = button.contains(event.target);
+    var buttonMenu = document.querySelector("#bMenu");
+    var buttonProfile = document.querySelector("#bProfile");
+    var isClickInsideM = buttonMenu.contains(event.target);
+    var isClickInsideP = buttonProfile.contains(event.target);
 
-    if (!isClickInside) {
+    if (!isClickInsideM) {
         Opção1Menu.style.padding = "0px";
         Opção1Menu.style.width = "0px";
         Opção1Menu.style.fontSize = "0px";
         Opção1Menu.style.left = "-50px";
-        Root.style.setProperty("--FonteMenu", "0%");
+        RootFM.style.setProperty("--FonteMenu", "0%");
         menu = false;
+    }
+
+    if (!isClickInsideP) {
+        profile = false;
+        Opção1Profile.style.padding = "0px";
+        Opção1Profile.style.width = "0px";
+        Opção1Profile.style.fontSize = "0px";
+        Opção1Profile.style.right = "-50px";
+        RootFM.style.setProperty("--FonteProfile", "0%");
     }
 });
 
@@ -24,26 +40,51 @@ function MybuttonMenuf() {
 
     if (menu) {
         menu = false;
-        console.log("desligado");
     } else {
         menu = true;
-        console.log("ligado");
     }
 
     if (menu) {
         Opção1Menu.style.padding = "20px";
-        Opção1Menu.style.width = "130px";
+        Opção1Menu.style.width = "200px";
         Opção1Menu.style.fontSize = "30px";
         Opção1Menu.style.left = "0px";
-        Root.style.setProperty("--FonteMenu", "100%");
+        RootFM.style.setProperty("--FonteMenu", "100%");
     } else {
         Opção1Menu.style.padding = "0px";
         Opção1Menu.style.width = "0px";
         Opção1Menu.style.fontSize = "0px";
         Opção1Menu.style.left = "-50px";
-        Root.style.setProperty("--FonteMenu", "0%");
+        RootFM.style.setProperty("--FonteMenu", "0%");
     }
 }
 
 
-//DPS Q AJEITAR, COLOQUE MAIS OPÇÕES NO SITE
+
+function MybuttonProfilef() {
+
+    let Opção1Profile = document.querySelector("#Opção1Profile");
+
+
+    if (profile) {
+        profile = false;
+        console.log("Não")
+    } else {
+        profile = true;
+        console.log("Sim")
+    }
+
+    if (profile) {
+        Opção1Profile.style.padding = "20px";
+        Opção1Profile.style.width = "150px";
+        Opção1Profile.style.fontSize = "30px";
+        Opção1Profile.style.right = "0px";
+        RootFP.style.setProperty("--FonteProfile", "100%");
+    } else {
+        Opção1Profile.style.padding = "0px";
+        Opção1Profile.style.width = "0px";
+        Opção1Profile.style.fontSize = "0px";
+        Opção1Profile.style.right = "-50px";
+        RootFP.style.setProperty("--FonteProfile", "0%");
+    }
+}
